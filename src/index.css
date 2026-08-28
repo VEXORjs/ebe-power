@@ -1,0 +1,144 @@
+@import 'tailwindcss';
+
+/* ============================================================================
+   EBE POWER — system wizualny
+   Ciemny, industrialny motyw: grafit + bezpieczeństwa żółty,
+   kondensacyjny krój nagłówków i techniczne etykiety.
+   ========================================================================== */
+
+@theme {
+  --color-ink: #070b12;
+  --color-ink-2: #0b111c;
+  --color-panel: #101827;
+  --color-line: #1e2a3d;
+  --color-line-2: #2a3a55;
+  --color-accent: #ffc61a;
+  --color-accent-2: #f59e0b;
+  --color-steel: #94a3b8;
+  --color-light: #e8eef7;
+
+  --font-display: 'Barlow Condensed', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 4px;
+}
+
+:root {
+  --accent: #ffc61a;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-light);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #070b12;
+}
+
+/* --- Krój wyświetlany ------------------------------------------------------ */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+/* --- Animacje wejścia ------------------------------------------------------ */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* --- Akcenty: taśma ostrzegawcza, siatka, cięcie --------------------------- */
+@utility hazard {
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--color-accent) 0 10px,
+    #0b0d12 10px 20px
+  );
+}
+
+@utility grid-lines {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+@utility slant {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 28px), calc(100% - 28px) 100%, 0 100%);
+}
+
+/* --- Etykieta techniczna --------------------------------------------------- */
+@utility eyebrow {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+@utility card-dark {
+  background: linear-gradient(180deg, #101827 0%, #0b111c 100%);
+  border: 1px solid var(--color-line);
+}
+
+/* --- Pasek przewijania ----------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #05080f;
+}
+::-webkit-scrollbar-thumb {
+  background: #22304a;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* --- Focus ---------------------------------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* --- Liczby w tabelach ---------------------------------------------------- */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
