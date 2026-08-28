@@ -1,3 +1,4 @@
+
 # EBE POWER — strona wizytówka
 
 Strona prezentacyjna (wizytówka) dla firmy **EBE POWER** zajmującej się sprzedażą agregatów
@@ -64,3 +65,4 @@ Podstrony: `/` · `/oferta` · `/realizacje` · `/o-firmie` · `/kontakt` · `/p
 - **FAQ** (rozwijane), liczniki animowane, stopka z danymi rejestrowymi, dane
   strukturalne `LocalBusiness` (schema.org), meta tagi OG per podstrona.
 - Dostępność: skip-link, focus-visible, `prefers-reduced-motion`, semantyczne nagłówki.
+
