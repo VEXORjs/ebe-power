@@ -1,7 +1,6 @@
 import { ArrowRight, Check, Phone, ShoppingCart } from 'lucide-react'
 import { brands, company, faq, products, services } from '../content/site'
 import { PageHero } from '../components/PageHero'
-import { PowerCalculator } from '../components/PowerCalculator'
 import { Accordion } from '../components/Accordion'
 import { CtaBand } from '../components/CtaBand'
 import { Seo } from '../components/Seo'
