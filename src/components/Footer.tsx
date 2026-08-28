@@ -15,7 +15,7 @@ export function Footer() {
           {/* Marka */}
           <div>
             <div className="flex items-center gap-3">
-              <LogoMark className="h-11 w-11" />
+              <LogoMark className="h-10 w-20" />
               <span className="font-display text-2xl font-extrabold tracking-[0.14em] text-light">
                 EBE<span className="text-accent">POWER</span>
               </span>
