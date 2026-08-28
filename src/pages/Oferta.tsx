@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Phone } from 'lucide-react'
+import { ArrowRight, Check, Phone, ShoppingCart } from 'lucide-react'
 import { brands, company, faq, products, services } from '../content/site'
 import { PageHero } from '../components/PageHero'
 import { PowerCalculator } from '../components/PowerCalculator'
@@ -23,6 +23,27 @@ export function Oferta() {
         lead="Nowe i używane jednostki od sprawdzonych producentów. Każdą ofertę poprzedzamy kalkulacją mocy pod Twój profil odbiorników — możesz policzyć ją sam w kalkulatorze poniżej."
         image="/images/product-industrial.jpg"
       />
+
+      {/* ================= SKLEP ONLINE ================= */}
+      {company.shopUrl && (
+        <section className="border-b border-line bg-accent/[0.06]">
+          <Container className="flex flex-col items-start justify-between gap-6 py-10 sm:flex-row sm:items-center">
+            <div>
+              <p className="font-display text-xl leading-tight font-extrabold tracking-wide uppercase">
+                Wolisz kupić online? Zajrzyj do naszego sklepu
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-steel">
+                Wybrane agregaty, akcesoria i części znajdziesz w sklepie internetowym{' '}
+                <span className="font-semibold text-light">sklep.ebe-power.pl</span>.
+              </p>
+            </div>
+            <Button href={company.shopUrl} external className="shrink-0">
+              <ShoppingCart className="h-4 w-4" />
+              Przejdź do sklepu
+            </Button>
+          </Container>
+        </section>
+      )}
 
       {/* ================= KALKULATOR ================= */}
       <section id="kalkulator" className="border-b border-line py-20 sm:py-24">

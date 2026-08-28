@@ -8,6 +8,7 @@ import {
   Phone,
   Quote,
   ShieldCheck,
+  ShoppingCart,
   Truck,
   Zap,
 } from 'lucide-react'
@@ -64,7 +65,7 @@ export function Home() {
       <section className="relative flex min-h-[88vh] items-center overflow-hidden border-b border-line">
         <img
           src="/images/hero.jpg"
-          alt="Agregat prądotwórczy EBE POWER w obudowie dźwiękochłonnej"
+          alt="Kontenerowy agregat prądotwórczy EBE POWER"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/92 to-ink/40" />
@@ -220,10 +221,18 @@ export function Home() {
                 title="Agregaty dopasowane do skali zadania"
                 lead="Cztery grupy urządzeń — od generatora, który zmieści się w bagażniku, po kontenerową elektrownię zasilającą cały zakład."
               />
-              <Button to="/oferta" variant="outline" className="shrink-0">
-                Pełna oferta
-                <ArrowRight className="h-4 w-4" />
-              </Button>
+              <div className="flex flex-wrap gap-4">
+                <Button to="/oferta" variant="outline" className="shrink-0">
+                  Pełna oferta
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+                {company.shopUrl && (
+                  <Button href={company.shopUrl} external variant="ghost" className="shrink-0">
+                    <ShoppingCart className="h-4 w-4" />
+                    Sklep online
+                  </Button>
+                )}
+              </div>
             </div>
           </Reveal>
 

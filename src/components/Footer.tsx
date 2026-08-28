@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Clock, Mail, MapPin, Phone } from 'lucide-react'
+import { Clock, ExternalLink, Mail, MapPin, Phone } from 'lucide-react'
 import { company, nav, products, services } from '../content/site'
 import { Container } from './ui'
 import { Logo, LogoMark } from './Logo'
@@ -60,6 +60,19 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              {company.shopUrl && (
+                <li>
+                  <a
+                    href={company.shopUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 font-semibold text-accent transition-colors hover:text-light"
+                  >
+                    Sklep internetowy
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                </li>
+              )}
               <li>
                 <Link to="/polityka-prywatnosci" className="transition-colors hover:text-accent">
                   Polityka prywatności
