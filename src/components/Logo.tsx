@@ -2,7 +2,7 @@ import { Zap } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { company } from '../content/site'
 
-export function LogoMark({ className = 'h-10 w-10' }: { className?: string }) {
+export function LogoMark({ className = 'h-10 w-20' }: { className?: string }) {
   return (
    <img
       src="images/logo.jpeg"
