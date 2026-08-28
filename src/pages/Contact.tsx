@@ -76,6 +76,7 @@ export function Contact() {
                         {company.email}
                       </a>
                     </li>
+                    {company.phoneSecondary && (
                     <li className="border-t border-line pt-5">
                       <p className="text-[11px] tracking-[0.16em] text-steel uppercase">Serwis / awarie</p>
                       <a
@@ -94,6 +95,7 @@ export function Contact() {
                       </a>
                       <p className="mt-2 text-xs text-steel">Dyżur całodobowy, 7 dni w tygodniu.</p>
                     </li>
+                    )}
                     <li className="border-t border-line pt-5">
                       <p className="text-[11px] tracking-[0.16em] text-steel uppercase">Adres</p>
                       <a
@@ -156,14 +158,18 @@ export function Contact() {
                       <dt>NIP</dt>
                       <dd className="tabular text-light">{company.nip}</dd>
                     </div>
-                    <div className="flex justify-between gap-4">
-                      <dt>REGON</dt>
-                      <dd className="tabular text-light">{company.regon}</dd>
-                    </div>
-                    <div className="flex justify-between gap-4">
-                      <dt>KRS</dt>
-                      <dd className="tabular text-light">{company.krs}</dd>
-                    </div>
+                    {company.regon && (
+                      <div className="flex justify-between gap-4">
+                        <dt>REGON</dt>
+                        <dd className="tabular text-light">{company.regon}</dd>
+                      </div>
+                    )}
+                    {company.krs && (
+                      <div className="flex justify-between gap-4">
+                        <dt>KRS</dt>
+                        <dd className="tabular text-light">{company.krs}</dd>
+                      </div>
+                    )}
                   </dl>
                 </div>
               </Reveal>

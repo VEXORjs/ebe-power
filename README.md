@@ -32,9 +32,12 @@ Podstrony: `/` · `/oferta` · `/realizacje` · `/o-firmie` · `/kontakt` · `/p
 
 ## ⚠️ Przed wdrożeniem — lista rzeczy do zrobienia
 
-1. **Dane firmy** — w pliku `src/content/site.ts` wszystkie pola oznaczone `TODO`:
-   telefon, e-mail, adres, NIP / REGON / KRS, numer konta, godziny otwarcia, rok założenia,
-   linki do social mediów oraz adres do mapy (`mapQuery`, `mapEmbed`).
+1. **Dane firmy** — w pliku `src/content/site.ts` zostały już wpisane: telefon `888 883 232`,
+   e-mail `kontakt@ebe-power.pl`, adres `Borki 10, 97-400 Bełchatów`, NIP `769 183 05 28`,
+   godziny `Pn–Pt 8:00–16:00`. Do uzupełnienia pozostały pola oznaczone `TODO`:
+   pełna nazwa prawna (forma działalności), REGON/KRS (jeśli dotyczą), numer konta,
+   osobny numer serwisowy, rok założenia oraz linki do social mediów.
+   Pola puste są automatycznie ukrywane na stronie.
 2. **Formularz kontaktowy** — domyślnie otwiera program pocztowy (mailto). Aby działał bez
    poczty, ustaw w `site.ts` pole `formEndpoint` (np. Formspree) lub pod własny endpoint.
    Zmienną środowiskową: `VITE_FORM_ENDPOINT` w pliku `.env`.

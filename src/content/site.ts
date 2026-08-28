@@ -10,33 +10,35 @@
 export const company = {
   name: 'EBE POWER',
   /** Pełna nazwa do stopki, faktur, polityki prywatności */
-  legalName: 'EBE POWER Sp. z o.o.', // TODO: pełna nazwa prawna
+  legalName: 'EBE POWER', // TODO: pełna nazwa prawna wraz z formą (np. Sp. z o.o.)
   claim: 'Energia, która nie zatrzyma Twojego biznesu',
   short: 'Agregaty prądotwórcze — sprzedaż, dobór mocy, montaż i serwis.',
 
   /* --- Kontakt ------------------------------------------------------------ */
-  phone: '+48 000 000 000', // TODO
-  phoneHref: 'tel:+48000000000', // TODO (bez spacji)
-  phoneSecondary: '+48 000 000 000', // TODO (serwis / pogotowie energetyczne)
-  email: 'biuro@ebepower.pl', // TODO
-  emailService: 'serwis@ebepower.pl', // TODO
-  street: 'ul. Przemysłowa 10', // TODO
-  postal: '00-000', // TODO
-  city: 'Bełchatów', // TODO
-  region: 'woj. łódzkie', // TODO
+  phone: '888 883 232',
+  phoneHref: 'tel:+48888883232',
+  /** Osobny numer na serwis / awarie. Zostaw puste, jeśli nie dotyczy. */
+  phoneSecondary: '', // TODO
+  email: 'kontakt@ebe-power.pl',
+  emailService: '', // TODO (np. serwis@ebe-power.pl) — puste = ukryty
+  street: 'Borki 10',
+  postal: '97-400',
+  city: 'Bełchatów',
+  region: 'woj. łódzkie',
 
   /* --- Dane rejestrowe ----------------------------------------------------- */
-  nip: '000-000-00-00', // TODO
-  regon: '000000000', // TODO
-  krs: '0000000000', // TODO
-  bank: 'PL00 0000 0000 0000 0000 0000 0000', // TODO
+  nip: '769 183 05 28',
+  /** Zostaw puste, jeśli nie dotyczy — wtedy nie pokażemy ich na stronie. */
+  regon: '', // TODO
+  krs: '', // TODO (tylko spółki wpisane do KRS)
+  bank: '', // TODO
 
   /* --- Godziny otwarcia ---------------------------------------------------- */
   hours: [
-    { days: 'Poniedziałek – Piątek', time: '7:30 – 17:00' },
-    { days: 'Sobota', time: '8:00 – 13:00' },
+    { days: 'Poniedziałek – Piątek', time: '8:00 – 16:00' },
+    { days: 'Sobota', time: 'zamknięte' },
     { days: 'Niedziela', time: 'zamknięte' },
-    { days: 'Pogotowie serwisowe', time: '24/7' },
+    { days: 'Pogotowie serwisowe', time: '24/7' }, // TODO: potwierdź lub usuń
   ],
 
   /* --- Social media (wpisz pełne URL-e, puste = ukryte) -------------------- */
@@ -47,10 +49,10 @@ export const company = {
   },
 
   /* --- Mapa (link "otwórz w mapach" + osadzona mapa) ----------------------- */
-  /** Adres zakodowany do URL-a, np. "EBE+Power,+ul.+Przemysłowa+10,+Bełchatów" */
-  mapQuery: 'Bełchatów,+Polska', // TODO
+  /** Adres do wyszukania w mapach (kodowanie zrobi encodeURIComponent) */
+  mapQuery: 'Borki 10, 97-400 Bełchatów',
   /** Embedding bez klucza API. Zostaw puste, żeby ukryć mapę. */
-  mapEmbed: 'https://www.google.com/maps?q=Be%C5%82chat%C3%B3w&output=embed', // TODO
+  mapEmbed: 'https://www.google.com/maps?q=Borki+10%2C+97-400+Be%C5%82chat%C3%B3w&output=embed',
 
   /** Rok założenia firmy (do licznika "lat doświadczenia") */
   founded: 2011, // TODO

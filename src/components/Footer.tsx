@@ -113,7 +113,9 @@ export function Footer() {
             © {year} {company.legalName}. Wszelkie prawa zastrzeżone.
           </p>
           <p className="tabular">
-            NIP: {company.nip} · REGON: {company.regon} · KRS: {company.krs}
+            NIP: {company.nip}
+            {company.regon && <> · REGON: {company.regon}</>}
+            {company.krs && <> · KRS: {company.krs}</>}
           </p>
         </div>
       </Container>
