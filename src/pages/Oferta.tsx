@@ -44,25 +44,7 @@ export function Oferta() {
           </Container>
         </section>
       )}
-
-      {/* ================= KALKULATOR ================= */}
-      <section id="kalkulator" className="border-b border-line py-20 sm:py-24">
-        <Container>
-          <Reveal>
-            <SectionHeading
-              eyebrow="Kalkulator"
-              title="Policz, jakiej mocy naprawdę potrzebujesz"
-              lead="Zaznacz odbiorniki, wpisz ich moc i sprawdź, jaki agregat udźwignie rozruch silników i sprężarek. Wynik wyślesz nam jednym kliknięciem."
-            />
-          </Reveal>
-          <Reveal delay={80}>
-            <div className="mt-12">
-              <PowerCalculator />
-            </div>
-          </Reveal>
-        </Container>
-      </section>
-
+      
       {/* ================= PRODUKTY ================= */}
       <section className="border-b border-line bg-ink-2 py-20 sm:py-24">
         <Container>
