@@ -41,6 +41,10 @@ export const company = {
     { days: 'Pogotowie serwisowe', time: '24/7' }, // TODO: potwierdź lub usuń
   ],
 
+  /* --- Sklep internetowy ---------------------------------------------------- */
+  /** Adres sklepu online. Zostaw puste (''), aby ukryć linki do sklepu. */
+  shopUrl: 'https://sklep.ebe-power.pl',
+
   /* --- Social media (wpisz pełne URL-e, puste = ukryte) -------------------- */
   social: {
     facebook: '', // TODO: https://facebook.com/...

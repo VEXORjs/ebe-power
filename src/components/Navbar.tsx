@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { ArrowRight, Clock, Mail, Menu, Phone, X } from 'lucide-react'
+import { ArrowRight, Clock, Mail, Menu, Phone, ShoppingCart, X } from 'lucide-react'
 import { company, nav } from '../content/site'
 import { Logo } from './Logo'
 
@@ -73,6 +73,17 @@ export function Navbar() {
                 {item.label}
               </NavLink>
             ))}
+            {company.shopUrl && (
+              <a
+                href={company.shopUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="font-display relative flex items-center gap-1.5 px-4 py-2 text-[15px] font-semibold tracking-[0.08em] text-accent uppercase transition-colors hover:text-light"
+              >
+                <ShoppingCart className="h-4 w-4" />
+                Sklep
+              </a>
+            )}
           </nav>
 
           <div className="hidden items-center gap-4 lg:flex">
@@ -127,6 +138,22 @@ export function Navbar() {
           </nav>
 
           <div className="space-y-4">
+            {company.shopUrl && (
+              <a
+                href={company.shopUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="font-display flex items-center justify-between border border-line-2 px-5 py-4 text-lg font-bold text-accent"
+              >
+                <span className="flex items-center gap-3">
+                  <ShoppingCart className="h-5 w-5" />
+                  Sklep online
+                </span>
+                <span className="text-sm font-semibold tracking-wide text-steel normal-case">
+                  sklep.ebe-power.pl
+                </span>
+              </a>
+            )}
             <a
               href={company.phoneHref}
               className="font-display flex items-center gap-3 border border-line-2 px-5 py-4 text-lg font-bold text-accent"
