@@ -267,7 +267,7 @@ export const applications: Application[] = [
   {
     title: 'Rolnictwo i uprawy',
     lead: 'Zasilanie systemów nawadniania, doju, chłodni, suszarni i szklarni w szczytowych momentach.',
-    image: '/images/hero.jpg',
+    image: '/images/real-5.jpg',
   },
   {
     title: 'Dom i mała firma',
@@ -303,7 +303,7 @@ export const process = [
 /* --- REALIZACJE ------------------------------------------------------------ */
 export type Project = {
   title: string
-  category: 'Przemysł' | 'Budownictwo' | 'Eventy' | 'Ochrona zdrowia' | 'Infrastruktura'
+  category: 'Przemysł' | 'Budownictwo' | 'Eventy' | 'Ochrona zdrowia' | 'Rolnictwo' | 'Infrastruktura'
   scope: string
   unit: string
   image: string
@@ -343,9 +343,41 @@ export const projects: Project[] = [
     image: '/images/real-4.jpg',
     year: '2024',
   },
+  {
+    title: 'Zasilanie gospodarstwa i szklarni',
+    category: 'Rolnictwo',
+    scope: 'Dobór pod pompy nawadniania i chłodnię, rozruch przy silnikach indukcyjnych',
+    unit: '1 × 60 kVA + SZR',
+    image: '/images/real-5.jpg',
+    year: '2025',
+  },
+  {
+    title: 'Roboty drogowe w nocy',
+    category: 'Infrastruktura',
+    scope: 'Agregat mobilny na przyczepie wraz z oświetleniem i zasilaniem narzędzi',
+    unit: '1 × 45 kVA + maszty oświetleniowe',
+    image: '/images/real-6.jpg',
+    year: '2023',
+  },
+  {
+    title: 'Budowa domu jednorodzinnego',
+    category: 'Budownictwo',
+    scope: 'Wydanie agregatu przenośnego wraz z przedłużaczami i instruktażem',
+    unit: '1 × 8 kW, benzynowy',
+    image: '/images/real-7.jpg',
+    year: '2025',
+  },
 ]
 
-export const projectCategories = ['Wszystkie', 'Przemysł', 'Budownictwo', 'Eventy', 'Ochrona zdrowia'] as const
+export const projectCategories = [
+  'Wszystkie',
+  'Przemysł',
+  'Budownictwo',
+  'Eventy',
+  'Ochrona zdrowia',
+  'Rolnictwo',
+  'Infrastruktura',
+] as const
 
 /* --- OPINIE ---------------------------------------------------------------- */
 export const testimonials = [

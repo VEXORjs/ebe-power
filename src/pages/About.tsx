@@ -97,9 +97,6 @@ export function About() {
                   alt="Zespół serwisu EBE POWER"
                   loading="lazy"
                   className="aspect-[4/3] w-full border border-line object-cover"
-                  onError={(e) => {
-                    e.currentTarget.src = '/images/about-warehouse.jpg'
-                  }}
                 />
                 <div className="card-dark p-6">
                   <div className="flex items-center gap-3">

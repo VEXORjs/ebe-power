@@ -44,7 +44,7 @@ export function Realizacje() {
         </Reveal>
         <Container className="mt-10">
           <p className="text-xs text-steel">
-            Liczba wyświetlanych realizacji: {projects.length}. Zdjęcia i opisy mają charakter
+            Wyświetlanych realizacji: {projects.length}. Zdjęcia i opisy mają charakter
             poglądowy — uzupełnij je o własne projekty w pliku{' '}
             <code className="text-accent">src/content/site.ts</code>.
           </p>
