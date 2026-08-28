@@ -4,12 +4,11 @@ import { company } from '../content/site'
 
 export function LogoMark({ className = 'h-10 w-10' }: { className?: string }) {
   return (
-    <span
-      className={`flex items-center justify-center bg-accent slant ${className}`}
-      aria-hidden="true"
-    >
-      <Zap className="h-[55%] w-[55%] text-ink" strokeWidth={2.6} />
-    </span>
+   <img
+      src="images/logo.jpeg"
+      alt={`${company.name} — logo`}
+      className={className}
+    />
   )
 }
 
