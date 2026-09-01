@@ -116,6 +116,12 @@ export function Contact() {
                     </li>
                     <li className="border-t border-line pt-5">
                       <p className="text-[11px] tracking-[0.16em] text-steel uppercase">Siedziba</p>
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(company.mapQueryHq)}`
+                        target="_blank"
+                        rel="noreferrer"
+                        className="mt-1 flex items-start gap-3 text-light transition-colors hover:text-accent"
+                      >
                         <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                         <span>
                           {company.hq}
@@ -124,6 +130,7 @@ export function Contact() {
                           <br />
                           <span className="text-steel">{company.region}</span>
                         </span>
+                      </a>
                     </li>
                     <li className="border-t border-line pt-5">
                       <p className="flex items-center gap-2 text-[11px] tracking-[0.16em] text-steel uppercase">
