@@ -79,7 +79,7 @@ export function About() {
 
               <dl className="mt-10 grid grid-cols-2 gap-px border border-line bg-line sm:grid-cols-4">
                 {stats.map((s) => (
-                  <div key={s.label} className="bg-panel px-4 py-5">
+                  <div key={s.label} className="rounded-2xl border border-line bg-panel px-4 py-5">
                     <dd className="font-display text-3xl font-extrabold text-accent">
                       <Counter to={s.value} />
                       <span className="text-lg">{s.suffix}</span>

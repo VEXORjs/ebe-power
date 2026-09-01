@@ -2,29 +2,37 @@
 
 /* ============================================================================
    EBE POWER — system wizualny
-   Ciemny, industrialny motyw: grafit + bezpieczeństwa żółty,
-   kondensacyjny krój nagłówków i techniczne etykiety.
+   Jasny motyw "zielona energia": czyste tła, zielono-turkusowe akcenty,
+   miękkie zaokrąglenia i delikatne cienie.
    ========================================================================== */
 
 @theme {
-  --color-ink: #070b12;
-  --color-ink-2: #0b111c;
-  --color-panel: #101827;
-  --color-line: #1e2a3d;
-  --color-line-2: #2a3a55;
-  --color-accent: #ffc61a;
-  --color-accent-2: #f59e0b;
-  --color-steel: #94a3b8;
-  --color-light: #e8eef7;
+  /* Tła */
+  --color-ink: #f5faf7;
+  --color-ink-2: #eaf4ee;
+  --color-panel: #ffffff;
+
+  /* Linie */
+  --color-line: #dceae2;
+  --color-line-2: #c2dbcd;
+
+  /* Akcenty */
+  --color-accent: #12a05f;
+  --color-accent-2: #0d8c6e;
+  --color-teal: #14b8a6;
+
+  /* Typografia */
+  --color-steel: #5c6f68;
+  --color-light: #0c2119;
 
   --font-display: 'Barlow Condensed', 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
 
-  --radius-card: 4px;
+  --radius-card: 18px;
 }
 
 :root {
-  --accent: #ffc61a;
+  --accent: #12a05f;
 }
 
 html {
@@ -44,7 +52,7 @@ body {
 
 ::selection {
   background: var(--color-accent);
-  color: #070b12;
+  color: #ffffff;
 }
 
 /* --- Krój wyświetlany ------------------------------------------------------ */
@@ -78,27 +86,34 @@ body {
   }
 }
 
-/* --- Akcenty: taśma ostrzegawcza, siatka, cięcie --------------------------- */
+/* --- Akcenty: pasek energii, siatka, poświata ------------------------------ */
 @utility hazard {
-  background-image: repeating-linear-gradient(
-    45deg,
-    var(--color-accent) 0 10px,
-    #0b0d12 10px 20px
+  background-image: linear-gradient(
+    90deg,
+    var(--color-accent) 0%,
+    var(--color-teal) 50%,
+    var(--color-accent-2) 100%
   );
 }
 
 @utility grid-lines {
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    linear-gradient(to right, rgba(18, 160, 95, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(18, 160, 95, 0.07) 1px, transparent 1px);
   background-size: 64px 64px;
+}
+
+@utility eco-glow {
+  background-image:
+    radial-gradient(60% 60% at 15% 10%, rgba(20, 184, 166, 0.16) 0%, transparent 70%),
+    radial-gradient(50% 60% at 90% 0%, rgba(18, 160, 95, 0.14) 0%, transparent 70%);
 }
 
 @utility slant {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 28px), calc(100% - 28px) 100%, 0 100%);
 }
 
-/* --- Etykieta techniczna --------------------------------------------------- */
+/* --- Etykieta ------------------------------------------------------------- */
 @utility eyebrow {
   font-family: var(--font-display);
   text-transform: uppercase;
@@ -111,9 +126,12 @@ body {
   gap: 0.6rem;
 }
 
+/* --- Karta ---------------------------------------------------------------- */
 @utility card-dark {
-  background: linear-gradient(180deg, #101827 0%, #0b111c 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f4faf6 100%);
   border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  box-shadow: 0 10px 30px -18px rgba(12, 60, 40, 0.35);
 }
 
 /* --- Pasek przewijania ----------------------------------------------------- */
@@ -122,11 +140,11 @@ body {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #05080f;
+  background: #eaf4ee;
 }
 ::-webkit-scrollbar-thumb {
-  background: #22304a;
-  border-radius: 0;
+  background: #bcd8c9;
+  border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent);

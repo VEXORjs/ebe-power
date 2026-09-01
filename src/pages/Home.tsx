@@ -68,28 +68,28 @@ export function Home() {
           alt="Kontenerowy agregat prądotwórczy EBE POWER"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/92 to-ink/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/60" />
-        <div className="grid-lines absolute inset-0 opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#06251a]/95 via-[#06251a]/80 to-[#06251a]/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#06251a]/90 via-transparent to-[#06251a]/50" />
+        <div className="grid-lines absolute inset-0 opacity-30" />
 
         <Container className="relative py-24">
           <Reveal>
-            <div className="eyebrow">
-              <span className="h-px w-10 bg-accent" />
+            <div className="eyebrow text-teal">
+              <span className="h-px w-10 bg-teal" />
               Agregaty prądotwórcze · sprzedaż · serwis
             </div>
           </Reveal>
           <Reveal delay={80}>
-            <h1 className="font-display mt-6 max-w-4xl text-[13vw] leading-[0.88] font-extrabold tracking-tight uppercase sm:text-6xl lg:text-8xl">
+            <h1 className="font-display mt-6 max-w-4xl text-[13vw] leading-[0.88] font-extrabold tracking-tight text-white uppercase sm:text-6xl lg:text-8xl">
               Energia, która
               <br />
-              <span className="text-accent">nie zatrzyma</span>
+              <span className="bg-gradient-to-r from-[#4ade80] to-[#2dd4bf] bg-clip-text text-transparent">nie zatrzyma</span>
               <br />
               Twojego biznesu
             </h1>
           </Reveal>
           <Reveal delay={160}>
-            <p className="mt-8 max-w-xl text-base leading-relaxed text-steel sm:text-lg">
+            <p className="mt-8 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
               Sprzedajemy agregaty prądotwórcze od 2&nbsp;kW do 2&nbsp;MW — od lekkich generatorów
               budowlanych po kontenerowe elektrownie dla przemysłu. Dobór mocy, dostawa, montaż,
               automatykę i serwis realizujemy jednym zespołem.
@@ -101,17 +101,17 @@ export function Home() {
                 Zobacz ofertę
                 <ArrowRight className="h-5 w-5" />
               </Button>
-              <Button to="/oferta#kalkulator" size="lg" variant="outline">
+              <Button to="/oferta#kalkulator" size="lg" variant="outline" className="border-white/40 bg-white/10 text-white backdrop-blur hover:border-white hover:bg-white/20 hover:text-white">
                 <Calculator className="h-5 w-5" />
                 Policz moc agregatu
               </Button>
             </div>
           </Reveal>
           <Reveal delay={320}>
-            <div className="mt-10 flex items-center gap-3 text-sm text-steel">
-              <Phone className="h-4 w-4 text-accent" />
+            <div className="mt-10 flex items-center gap-3 text-sm text-white/75">
+              <Phone className="h-4 w-4 text-teal" />
               Lub zadzwoń:{' '}
-              <a href={company.phoneHref} className="font-semibold text-light hover:text-accent">
+              <a href={company.phoneHref} className="font-semibold text-white hover:text-teal">
                 {company.phone}
               </a>
             </div>
@@ -119,7 +119,7 @@ export function Home() {
 
           <a
             href="#o-nas"
-            className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[10px] tracking-[0.3em] text-steel uppercase transition-colors hover:text-accent lg:flex"
+            className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[10px] tracking-[0.3em] text-white/60 uppercase transition-colors hover:text-white lg:flex"
           >
             Przewiń
             <ArrowDown className="h-4 w-4 animate-bounce" />
@@ -127,16 +127,16 @@ export function Home() {
         </Container>
 
         {/* Pasek liczb */}
-        <div className="absolute inset-x-0 bottom-0 hidden border-t border-line bg-ink/80 backdrop-blur lg:block">
+        <div className="absolute inset-x-0 bottom-0 hidden border-t border-white/15 bg-white/10 backdrop-blur-md lg:block">
           <Container>
-            <dl className="grid grid-cols-4 divide-x divide-line">
+            <dl className="grid grid-cols-4 divide-x divide-white/15">
               {stats.map((s) => (
                 <div key={s.label} className="flex items-baseline gap-3 px-2 py-5">
-                  <dd className="font-display text-3xl font-extrabold text-accent">
+                  <dd className="font-display text-3xl font-extrabold text-white">
                     <Counter to={s.value} />
                     <span className="text-xl">{s.suffix}</span>
                   </dd>
-                  <dt className="max-w-[140px] text-[11px] leading-tight text-steel">{s.label}</dt>
+                  <dt className="max-w-[140px] text-[11px] leading-tight text-white/70">{s.label}</dt>
                 </div>
               ))}
             </dl>
@@ -157,7 +157,7 @@ export function Home() {
                   className="aspect-[4/3] w-full object-cover"
                 />
                 <div className="absolute -bottom-6 -right-6 hidden h-32 w-32 border-l-2 border-t-2 border-accent sm:block" />
-                <div className="absolute -top-4 -left-4 bg-accent px-5 py-4 text-ink">
+                <div className="absolute -top-4 -left-4 rounded-2xl bg-accent px-5 py-4 text-white">
                   <p className="font-display text-3xl leading-none font-extrabold">
                     {new Date().getFullYear() - company.founded}
                   </p>
@@ -241,7 +241,7 @@ export function Home() {
               <Reveal key={p.id} delay={i * 90}>
                 <Link
                   to="/oferta"
-                  className="group flex h-full flex-col border border-line bg-panel transition-all duration-300 hover:-translate-y-1 hover:border-accent"
+                  className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-panel shadow-[0_10px_30px_-22px_rgba(12,60,40,0.4)] transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[0_20px_44px_-22px_rgba(12,60,40,0.45)]"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <img
@@ -251,7 +251,7 @@ export function Home() {
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-panel via-transparent to-transparent" />
-                    <span className="font-display absolute top-4 left-4 bg-accent px-3 py-1 text-xs font-bold tracking-[0.12em] uppercase text-ink">
+                    <span className="font-display absolute top-4 left-4 bg-accent px-3 py-1 text-xs font-bold tracking-[0.12em] uppercase text-white">
                       {p.range}
                     </span>
                   </div>
@@ -332,7 +332,7 @@ export function Home() {
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#06251a]/90 via-[#06251a]/35 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-6">
                     <h3 className="font-display text-2xl font-extrabold tracking-wide uppercase">
                       {a.title}
@@ -404,7 +404,7 @@ export function Home() {
             <div className="grid gap-5 sm:grid-cols-2">
               {advantages.map((a, i) => (
                 <Reveal key={a.title} delay={i * 70}>
-                  <div className="h-full border-l-2 border-accent/40 bg-panel p-6 transition-colors hover:border-accent">
+                  <div className="h-full rounded-2xl border border-line border-l-4 border-l-accent/60 bg-panel p-6 transition-colors hover:border-l-accent">
                     <span className="font-display text-xs font-bold tracking-[0.2em] text-accent">
                       {String(i + 1).padStart(2, '0')}
                     </span>
@@ -475,7 +475,7 @@ export function Home() {
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#06251a]/90 via-[#06251a]/30 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-6">
                     <span className="font-display text-[11px] font-bold tracking-[0.16em] text-accent uppercase">
                       {p.category} · {p.year}
@@ -493,7 +493,7 @@ export function Home() {
       </section>
 
       {/* ================= OPINIE ================= */}
-      <section className="border-b border-line bg-[#f4f6fa] py-20 text-ink sm:py-28">
+      <section className="border-b border-line bg-white py-20 text-light sm:py-28">
         <Container>
           <Reveal>
             <SectionHeading
@@ -506,14 +506,14 @@ export function Home() {
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
             {testimonials.map((t, i) => (
               <Reveal key={t.name} delay={i * 90}>
-                <figure className="flex h-full flex-col border border-slate-200 bg-white p-7 shadow-sm">
+                <figure className="flex h-full flex-col rounded-3xl border border-line bg-ink p-7 shadow-[0_16px_40px_-24px_rgba(12,60,40,0.4)]">
                   <Quote className="h-8 w-8 text-accent" />
-                  <blockquote className="mt-5 flex-1 text-sm leading-relaxed text-slate-700">
+                  <blockquote className="mt-5 flex-1 text-sm leading-relaxed text-steel">
                     {t.text}
                   </blockquote>
-                  <figcaption className="mt-6 border-t border-slate-200 pt-5">
+                  <figcaption className="mt-6 border-t border-line pt-5">
                     <p className="font-display text-lg font-extrabold tracking-wide uppercase">{t.name}</p>
-                    <p className="mt-1 text-xs text-slate-500">{t.role}</p>
+                    <p className="mt-1 text-xs text-steel/80">{t.role}</p>
                   </figcaption>
                 </figure>
               </Reveal>

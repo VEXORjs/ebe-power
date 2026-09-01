@@ -66,7 +66,7 @@ export function Oferta() {
                 >
                   <div className="relative overflow-hidden border border-line">
                     <img src={p.image} alt={p.name} loading="lazy" className="aspect-[4/3] w-full object-cover" />
-                    <span className="font-display absolute top-4 left-4 bg-accent px-4 py-2 text-sm font-bold tracking-[0.12em] uppercase text-ink">
+                    <span className="font-display absolute top-4 left-4 bg-accent px-4 py-2 text-sm font-bold tracking-[0.12em] uppercase text-white">
                       {p.range}
                     </span>
                   </div>
@@ -88,7 +88,7 @@ export function Oferta() {
 
                     <dl className="mt-8 grid grid-cols-2 gap-px border border-line bg-line">
                       {p.specs.map((s) => (
-                        <div key={s.label} className="bg-panel px-4 py-3">
+                        <div key={s.label} className="rounded-xl bg-panel px-4 py-3">
                           <dt className="text-[11px] tracking-[0.12em] text-steel uppercase">{s.label}</dt>
                           <dd className="font-display mt-1 text-lg font-bold text-light">{s.value}</dd>
                         </div>

@@ -53,7 +53,7 @@ export function Navbar() {
 
       <header
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-          scrolled ? 'border-b border-line bg-ink/95 backdrop-blur-md' : 'border-b border-transparent bg-ink/60'
+          scrolled ? 'border-b border-line bg-white/90 shadow-[0_10px_30px_-24px_rgba(12,60,40,0.6)] backdrop-blur-md' : 'border-b border-transparent bg-white/70 backdrop-blur'
         }`}
       >
         <div className="mx-auto flex h-[72px] w-full max-w-7xl items-center justify-between px-5 sm:px-8">
@@ -96,7 +96,7 @@ export function Navbar() {
             </a>
             <Link
               to="/kontakt"
-              className="font-display inline-flex h-11 items-center gap-2 bg-accent px-6 text-sm font-bold tracking-[0.12em] uppercase text-ink transition-all hover:-translate-y-0.5 hover:bg-accent-2"
+              className="font-display inline-flex h-11 items-center gap-2 rounded-full bg-accent px-6 text-sm font-bold tracking-[0.12em] uppercase text-white shadow-[0_10px_24px_-10px_rgba(18,160,95,0.8)] transition-all hover:-translate-y-0.5 hover:bg-accent-2"
             >
               Zapytaj o wycenę
               <ArrowRight className="h-4 w-4" />
@@ -163,7 +163,7 @@ export function Navbar() {
             </a>
             <Link
               to="/kontakt"
-              className="font-display flex h-14 items-center justify-center bg-accent text-base font-bold tracking-[0.12em] uppercase text-ink"
+              className="font-display flex h-14 items-center justify-center rounded-full bg-accent text-base font-bold tracking-[0.12em] uppercase text-white"
             >
               Zapytaj o wycenę
             </Link>
