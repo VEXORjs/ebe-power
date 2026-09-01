@@ -97,7 +97,7 @@ export function Footer() {
                   Kalkulator doboru mocy
                 </Link>
               </li>
-              <li className="pt-1 text-xs text-steel/70">{services.length} usług towarzyszących</li>
+              <li className="pt-1 text-xs text-steel">{services.length} usług towarzyszących</li>
             </ul>
           </div>
 

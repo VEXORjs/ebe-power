@@ -53,7 +53,7 @@ export function SectionHeading({
         {title}
       </h2>
       {lead && (
-        <p className={`mt-5 text-base leading-relaxed sm:text-lg ${light ? 'text-slate-600' : 'text-steel'}`}>
+        <p className={`mt-5 text-base leading-relaxed sm:text-lg ${light ? 'text-ink/85' : 'text-steel'}`}>
           {lead}
         </p>
       )}

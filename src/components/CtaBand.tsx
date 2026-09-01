@@ -2,7 +2,7 @@ import { ArrowRight, Phone } from 'lucide-react'
 import { company } from '../content/site'
 import { Button, Container } from './ui'
 
-/** Żółty pas z wezwaniem do działania — stosowany na końcu każdej podstrony. */
+/** Zielony pas z wezwaniem do działania — stosowany na końcu każdej podstrony. */
 export function CtaBand({
   title = 'Potrzebujesz agregatu? Policzmy moc i dobierzmy urządzenie.',
   lead = 'Opisz nam swoje odbiorniki lub prześlij zdjęcia tablicy rozdzielczej — przygotujemy wycenę i termin dostawy w ciągu jednego dnia roboczego.',
@@ -11,7 +11,7 @@ export function CtaBand({
   lead?: string
 }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-accent via-accent-2 to-teal text-white">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#0b7d4b] via-[#0c8a5a] to-[#0f766e] text-white">
       <div
         className="absolute inset-0 opacity-[0.08]"
         style={{
@@ -24,7 +24,7 @@ export function CtaBand({
             <h2 className="font-display text-3xl leading-[1] font-extrabold tracking-tight uppercase sm:text-5xl">
               {title}
             </h2>
-            <p className="mt-4 text-sm leading-relaxed text-white/80 sm:text-base">{lead}</p>
+            <p className="mt-4 text-sm leading-relaxed text-white/90 sm:text-base">{lead}</p>
           </div>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Button to="/kontakt" size="lg" className="bg-white text-accent hover:bg-white/90">

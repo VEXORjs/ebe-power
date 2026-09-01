@@ -8,7 +8,7 @@ export function NotFound() {
       <Seo title="Strona nie znaleziona | EBE POWER" description="Nie znaleziono strony." path="/404" />
       <section className="grid-lines relative flex min-h-[70vh] items-center border-b border-line">
         <Container className="py-24 text-center">
-          <p className="font-display text-[18vw] leading-none font-extrabold text-line-2 sm:text-[12rem]">
+          <p className="font-display text-[18vw] leading-none font-extrabold text-steel/60 sm:text-[12rem]">
             404
           </p>
           <h1 className="font-display mt-4 text-3xl font-extrabold tracking-tight uppercase sm:text-5xl">

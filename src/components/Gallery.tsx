@@ -75,7 +75,7 @@ export function Gallery() {
           aria-label={current.title}
         >
           <button
-            className="absolute top-6 right-6 flex h-11 w-11 items-center justify-center border border-line-2 text-light hover:border-accent hover:text-accent"
+            className="absolute top-6 right-6 flex h-11 w-11 items-center justify-center border border-white/40 bg-white/10 text-white backdrop-blur hover:border-mint hover:text-mint"
             onClick={() => setActive(null)}
             aria-label="Zamknij podgląd"
           >
@@ -83,8 +83,8 @@ export function Gallery() {
           </button>
           <figure className="max-h-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
             <img src={current.image} alt={current.title} className="max-h-[75vh] w-full object-contain" />
-            <figcaption className="mt-4 text-center text-sm text-steel">
-              <span className="font-display text-lg font-bold tracking-wide text-light uppercase">
+            <figcaption className="mt-4 text-center text-sm text-white/80">
+              <span className="font-display text-lg font-bold tracking-wide text-white uppercase">
                 {current.title}
               </span>
               <br />

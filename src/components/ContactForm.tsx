@@ -124,7 +124,7 @@ export function ContactForm({ power }: { power?: string }) {
           rows={5}
           defaultValue={initialMessage}
           placeholder="Zastosowanie, lista odbiorników, miejsce montażu, oczekiwany termin…"
-          className="w-full rounded-xl border border-line bg-white px-3 py-3 text-sm text-light placeholder:text-steel/60 focus:border-accent focus:outline-none"
+          className="w-full rounded-xl border border-line bg-white px-3 py-3 text-sm text-light placeholder:text-steel/80 focus:border-accent focus:outline-none"
         />
       </div>
 
