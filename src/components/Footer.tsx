@@ -114,10 +114,6 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-            <div className="mt-5 flex items-center gap-2 text-xs text-accent">
-              <Clock className="h-4 w-4" />
-              Pogotowie energetyczne — całą dobę
-            </div>
           </div>
         </div>
 
