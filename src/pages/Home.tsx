@@ -101,10 +101,6 @@ export function Home() {
                 Zobacz ofertę
                 <ArrowRight className="h-5 w-5" />
               </Button>
-              <Button to="/oferta#kalkulator" size="lg" variant="outline" className="border-white/40 bg-white/10 text-white backdrop-blur hover:border-white hover:bg-white/20 hover:text-white">
-                <Calculator className="h-5 w-5" />
-                Policz moc agregatu
-              </Button>
             </div>
           </Reveal>
           <Reveal delay={320}>
