@@ -53,9 +53,9 @@ export const company = {
 
   /* --- Mapa (link "otwórz w mapach" + osadzona mapa) ----------------------- */
   /** Adres do wyszukania w mapach (kodowanie zrobi encodeURIComponent) */
-  mapQuery: 'Borki 10, 97-400 Bełchatów',
+  mapQuery: 'Nowy Świat 26F, 97-400 Bełchatów',
   /** Embedding bez klucza API. Zostaw puste, żeby ukryć mapę. */
-  mapEmbed: 'https://www.google.com/maps?q=Borki+10%2C+97-400+Be%C5%82chat%C3%B3w&output=embed',
+  mapEmbed: 'https://www.google.com/maps?q=Nowy+%C5%9Awiat+26F%2C+97-400+Be%C5%82chat%C3%B3w&output=embed',
 
   /** Rok założenia firmy (do licznika "lat doświadczenia") */
   founded: 2011, // TODO
