@@ -21,10 +21,11 @@ export const company = {
   phoneSecondary: '', // TODO
   email: 'kontakt@ebe-power.pl',
   emailService: '', // TODO (np. serwis@ebe-power.pl) — puste = ukryty
-  street: 'Nowy Świat 26F',
+  street: 'Borki 10',
   postal: '97-400',
   city: 'Bełchatów',
   region: 'woj. łódzkie',
+  hq: 'Nowy Świat 26F',
 
   /* --- Dane rejestrowe ----------------------------------------------------- */
   nip: '769 183 05 28',
