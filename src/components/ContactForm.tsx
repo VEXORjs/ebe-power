@@ -162,8 +162,6 @@ export function ContactForm({ power }: { power?: string }) {
         <p className="text-[11px] text-steel">
           Po kliknięciu otworzy się okno Twojego
           programu pocztowego z gotową wiadomością.
-          <code className="mx-1 text-accent">src/content/site.ts</code> (pole
-          <code className="mx-1 text-accent">formEndpoint</code>).
         </p>
       )}
       {state === 'error' && (
