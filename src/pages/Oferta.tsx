@@ -154,7 +154,7 @@ export function Oferta() {
               {brands.map((b) => (
                 <span
                   key={b}
-                  className="font-display text-lg font-bold tracking-[0.14em] text-steel/70 uppercase transition-colors hover:text-accent"
+                  className="font-display text-lg font-bold tracking-[0.14em] text-steel uppercase transition-colors hover:text-accent"
                 >
                   {b}
                 </span>

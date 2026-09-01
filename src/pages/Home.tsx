@@ -334,10 +334,10 @@ export function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#06251a]/90 via-[#06251a]/35 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-6">
-                    <h3 className="font-display text-2xl font-extrabold tracking-wide uppercase">
+                    <h3 className="font-display text-2xl font-extrabold tracking-wide text-white uppercase">
                       {a.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-steel">{a.lead}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-white/80">{a.lead}</p>
                   </div>
                   <span className="absolute top-4 left-4 h-8 w-1 bg-accent" />
                 </div>
@@ -434,7 +434,7 @@ export function Home() {
             {process.map((p, i) => (
               <Reveal key={p.step} delay={i * 90}>
                 <div className="relative h-full border-t-2 border-accent pt-6">
-                  <span className="font-display text-5xl leading-none font-extrabold text-line-2">
+                  <span className="font-display text-5xl leading-none font-extrabold text-steel/60">
                     {p.step}
                   </span>
                   <h3 className="font-display mt-4 text-lg font-bold leading-tight tracking-wide uppercase">
@@ -477,13 +477,13 @@ export function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#06251a]/90 via-[#06251a]/30 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-6">
-                    <span className="font-display text-[11px] font-bold tracking-[0.16em] text-accent uppercase">
+                    <span className="font-display text-[11px] font-bold tracking-[0.16em] text-mint uppercase">
                       {p.category} · {p.year}
                     </span>
-                    <h3 className="font-display mt-2 text-xl leading-tight font-extrabold tracking-wide uppercase">
+                    <h3 className="font-display mt-2 text-xl leading-tight font-extrabold tracking-wide text-white uppercase">
                       {p.title}
                     </h3>
-                    <p className="mt-2 text-xs text-steel">{p.unit}</p>
+                    <p className="mt-2 text-xs text-white/75">{p.unit}</p>
                   </div>
                 </div>
               </Reveal>
@@ -500,7 +500,6 @@ export function Home() {
               eyebrow="Opinie klientów"
               title="Co mówią ci, którym już zasililiśmy biznes"
               align="center"
-              light
             />
           </Reveal>
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
@@ -513,7 +512,7 @@ export function Home() {
                   </blockquote>
                   <figcaption className="mt-6 border-t border-line pt-5">
                     <p className="font-display text-lg font-extrabold tracking-wide uppercase">{t.name}</p>
-                    <p className="mt-1 text-xs text-steel/80">{t.role}</p>
+                    <p className="mt-1 text-xs text-steel">{t.role}</p>
                   </figcaption>
                 </figure>
               </Reveal>
@@ -535,7 +534,7 @@ export function Home() {
               {brands.map((b) => (
                 <span
                   key={b}
-                  className="font-display text-lg font-bold tracking-[0.14em] text-steel/70 uppercase transition-colors hover:text-accent"
+                  className="font-display text-lg font-bold tracking-[0.14em] text-steel uppercase transition-colors hover:text-accent"
                 >
                   {b}
                 </span>
