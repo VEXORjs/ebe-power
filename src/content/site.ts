@@ -10,7 +10,7 @@
 export const company = {
   name: 'EBE POWER',
   /** Pełna nazwa do stopki, faktur, polityki prywatności */
-  legalName: 'EBE POWER', // TODO: pełna nazwa prawna wraz z formą (np. Sp. z o.o.)
+  legalName: 'EBE POWER Kalina Chudzik', // TODO: pełna nazwa prawna wraz z formą (np. Sp. z o.o.)
   claim: 'Energia, która nie zatrzyma Twojego biznesu',
   short: 'Agregaty prądotwórcze — sprzedaż, dobór mocy, montaż i serwis.',
 
