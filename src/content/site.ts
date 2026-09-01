@@ -29,7 +29,7 @@ export const company = {
   /* --- Dane rejestrowe ----------------------------------------------------- */
   nip: '769 183 05 28',
   /** Zostaw puste, jeśli nie dotyczy — wtedy nie pokażemy ich na stronie. */
-  regon: '', // TODO
+  regon: '384398249',
   krs: '', // TODO (tylko spółki wpisane do KRS)
   bank: '', // TODO
 
@@ -38,7 +38,6 @@ export const company = {
     { days: 'Poniedziałek – Piątek', time: '8:00 – 16:00' },
     { days: 'Sobota', time: 'zamknięte' },
     { days: 'Niedziela', time: 'zamknięte' },
-    { days: 'Pogotowie serwisowe', time: '24/7' }, // TODO: potwierdź lub usuń
   ],
 
   /* --- Sklep internetowy ---------------------------------------------------- */
@@ -69,7 +68,6 @@ export const stats = [
   { value: 2026 - company.founded, suffix: '', label: 'lat na rynku energii' },
   { value: 1200, suffix: '+', label: 'dostarczonych agregatów' },
   { value: 2000, suffix: ' kVA', label: 'maksymalna moc jednostki' },
-  { value: 24, suffix: '/7', label: 'pogotowie serwisowe' },
 ]
 
 /* --- OFERTA — kategorie agregatów ----------------------------------------- */
@@ -128,48 +126,6 @@ export const products: Product[] = [
     applications: ['Firmy i biura', 'Serwerownie', 'Hotele', 'Zakłady produkcyjne'],
     priceFrom: 'od 24 900 zł netto',
   },
-  {
-    id: 'przemyslowe',
-    name: 'Agregaty przemysłowe i kontenerowe',
-    range: '100 – 2000 kVA',
-    image: '/images/product-industrial.jpg',
-    lead: 'Ciężki sprzęt do pracy ciągłej i szczytowej. Zabudowa kontenerowa, zbiorniki wielkogabarytowe, integracja z istniejącą infrastrukturą.',
-    features: [
-      'Zabudowa kontenerowa 20’ / 40’ z wygłuszeniem i wentylacją',
-      'Praca ciągła (Prime) i rezerwowa (Standby)',
-      'Integracja z rozdzielniami, SZR i systemami BMS',
-      'Możliwość pracy równoległej kilku jednostek',
-    ],
-    specs: [
-      { label: 'Moc znamionowa', value: '100 – 2000 kVA' },
-      { label: 'Paliwo', value: 'diesel / gaz' },
-      { label: 'Napięcie', value: '400 V / 6 kV / 15 kV' },
-      { label: 'Praca', value: 'Prime / Standby' },
-    ],
-    applications: ['Przemysł ciężki', 'Szpitale', 'Data center', 'Kopalnie i energetyka'],
-    priceFrom: 'wycena indywidualna',
-  },
-  {
-    id: 'uzywane',
-    name: 'Agregaty używane i poleasingowe',
-    range: '5 – 500 kVA',
-    image: '/images/product-used.jpg',
-    lead: 'Sprawdzony sprzęt po przeglądzie serwisowym, z udokumentowanym przebiegiem i gwarancją rozruchową. Najlepszy stosunek ceny do mocy.',
-    features: [
-      'Pełny przegląd: silnik, prądnica, układ paliwowy, sterowanie',
-      'Wymiana olejów, filtrów, pasków i akumulatorów',
-      'Dokumentacja zdjęciowa i protokół pomiarowy',
-      'Gwarancja rozruchowa 6–12 miesięcy',
-    ],
-    specs: [
-      { label: 'Moc znamionowa', value: '5 – 500 kVA' },
-      { label: 'Przebieg', value: 'raport mth' },
-      { label: 'Stan', value: 'po przeglądzie' },
-      { label: 'Gwarancja', value: '6 – 12 miesięcy' },
-    ],
-    applications: ['Budżetowe inwestycje', 'Zasilanie rezerwowe', 'Wynajem', 'Projekty sezonowe'],
-    priceFrom: 'od 60% ceny nowego',
-  },
 ]
 
 /* --- USŁUGI ---------------------------------------------------------------- */
@@ -187,28 +143,13 @@ export const services: Service[] = [
   },
   {
     icon: 'package',
-    title: 'Sprzedaż agregatów nowych i używanych',
+    title: 'Sprzedaż nowych agregatów',
     lead: 'Jednostki 2 kW – 2 MW od sprawdzonych producentów, z pełną dokumentacją techniczną i gwarancją.',
   },
   {
     icon: 'truck',
     title: 'Transport, montaż i uruchomienie',
     lead: 'Dowóz własnym sprzętem, posadowienie, podłączenie, rozruch i test pod obciążeniem u klienta.',
-  },
-  {
-    icon: 'settings',
-    title: 'Automatyka SZR i integracja',
-    lead: 'Szafy automatyki zaniku sieci, przełączanie bezprzerwowe, monitoring i sterowanie zdalne.',
-  },
-  {
-    icon: 'wrench',
-    title: 'Serwis, przeglądy i części',
-    lead: 'Przeglądy okresowe, naprawy gwarancyjne i pogwarancyjne, oryginalne części i materiały eksploatacyjne.',
-  },
-  {
-    icon: 'file',
-    title: 'Finansowanie, leasing i dokumentacja',
-    lead: 'Leasing, raty i wynajem z opcją wykupu. Pomagamy też w formalnościach i dokumentacji odbiorowej.',
   },
 ]
 
@@ -229,14 +170,6 @@ export const advantages = [
   {
     title: 'Realne terminy dostaw',
     lead: 'Część modeli mamy od ręki w magazynie, resztę sprowadzamy w przewidywalnym, potwierdzonym terminie.',
-  },
-  {
-    title: 'Gwarancja i serwis po gwarancji',
-    lead: 'Pełna obsługa serwisowa przez cały cykl życia agregatu, w tym przeglądy okresowe i testy obciążeniowe.',
-  },
-  {
-    title: 'Pogotowie energetyczne 24/7',
-    lead: 'Gdy zabraknie prądu, jesteśmy dostępni całą dobę – także w weekendy i święta.',
   },
 ]
 
@@ -434,47 +367,8 @@ export const faq = [
 /* Uwaga: nazwy są własnością ich producentów. Zmień listę na takie, które
    faktycznie oferujesz lub serwisujesz. */
 export const brands = [
-  'Cummins',
-  'Perkins',
-  'Volvo Penta',
-  'Baudouin',
-  'Stamford',
-  'Leroy-Somer',
-  'Mecc Alte',
-  'Himoinsa',
+  'CGM',
   'Pramac',
-  'Atlas Copco',
-  'Caterpillar',
-  'Kohler',
-  'SDMO',
-  'Deep Sea',
-  'ComAp',
-]
-
-/* --- KALKULATOR DOBORU MOCY — domyślne odbiorniki -------------------------- */
-export type CalcLoad = {
-  id: string
-  label: string
-  /** domyślna moc znamionowa [kW] */
-  defaultKw: number
-  /** współczynnik prądu rozruchowego (1 = brak udaru) */
-  surge: number
-  /** hint wyświetlany pod polem */
-  hint?: string
-  on: boolean
-}
-
-export const calcLoads: CalcLoad[] = [
-  { id: 'light', label: 'Oświetlenie LED i gniazdka', defaultKw: 1.5, surge: 1, on: true },
-  { id: 'it', label: 'Komputery, serwerownia, UPS', defaultKw: 2.0, surge: 1.1, on: true },
-  { id: 'fridge', label: 'Chłodnictwo, lodówki, mroźnie', defaultKw: 1.2, surge: 3, on: false },
-  { id: 'pump', label: 'Pompy, hydrofory', defaultKw: 2.2, surge: 4, on: false },
-  { id: 'compressor', label: 'Sprężarka', defaultKw: 4.0, surge: 4, on: false },
-  { id: 'hvac', label: 'Klimatyzacja i wentylacja', defaultKw: 3.5, surge: 2.5, on: false },
-  { id: 'tools', label: 'Elektronarzędzia budowlane', defaultKw: 3.0, surge: 2, on: false },
-  { id: 'welder', label: 'Spawarka', defaultKw: 5.0, surge: 2, on: false },
-  { id: 'kitchen', label: 'Kuchnia elektryczna / catering', defaultKw: 6.0, surge: 1, on: false },
-  { id: 'heating', label: 'Ogrzewanie elektryczne', defaultKw: 9.0, surge: 1, on: false },
 ]
 
 /* --- NAWIGACJA ------------------------------------------------------------- */
