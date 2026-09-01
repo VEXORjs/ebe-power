@@ -27,11 +27,11 @@ export function CtaBand({
             <p className="mt-4 text-sm leading-relaxed text-white/90 sm:text-base">{lead}</p>
           </div>
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Button to="/kontakt" size="lg" className="bg-white text-black text-accent hover:bg-white/90">
+            <Button to="/kontakt" size="lg" className="bg-white text-black hover:font-medium">
               Zapytaj o wycenę
               <ArrowRight className="h-5 w-5" />
             </Button>
-            <Button href={company.phoneHref} size="lg" variant="dark" className="border-white/50 bg-transparent text-black hover:border-white hover:text-white">
+            <Button href={company.phoneHref} size="lg" variant="dark" className="border-white/50 bg-transparent text-black hover:font-medium">
               <Phone className="h-5 w-5" />
               {company.phone}
             </Button>
