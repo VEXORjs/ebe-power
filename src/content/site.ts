@@ -54,7 +54,8 @@ export const company = {
 
   /* --- Mapa (link "otwórz w mapach" + osadzona mapa) ----------------------- */
   /** Adres do wyszukania w mapach (kodowanie zrobi encodeURIComponent) */
-  mapQuery: 'Nowy Świat 26F, 97-400 Bełchatów',
+  mapQuery: 'Borki 10, 97-400 Bełchatów',
+  mapQueryHq: 'Nowy Świat 26F, 97-400 Bełchatów',
   /** Embedding bez klucza API. Zostaw puste, żeby ukryć mapę. */
   mapEmbed: 'https://www.google.com/maps?q=Nowy+%C5%9Awiat+26F%2C+97-400+Be%C5%82chat%C3%B3w&output=embed',
 
