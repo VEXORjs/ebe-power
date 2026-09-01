@@ -160,8 +160,8 @@ export function ContactForm({ power }: { power?: string }) {
 
       {!company.formEndpoint && (
         <p className="text-[11px] text-steel">
-          Formularz nie ma jeszcze podpiętego backendu — po kliknięciu otworzy się okno Twojego
-          programu pocztowego z gotową wiadomością. Można też podpiąć własny endpoint w pliku
+          Po kliknięciu otworzy się okno Twojego
+          programu pocztowego z gotową wiadomością.
           <code className="mx-1 text-accent">src/content/site.ts</code> (pole
           <code className="mx-1 text-accent">formEndpoint</code>).
         </p>
