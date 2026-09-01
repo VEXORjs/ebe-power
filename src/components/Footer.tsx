@@ -9,7 +9,7 @@ const year = new Date().getFullYear()
 export function Footer() {
   return (
     <footer className="relative border-t border-line bg-ink-2">
-      <div className="hazard h-1.5 w-full" />
+      <div className="hazard h-1 w-full" />
       <Container className="pt-16 pb-28 lg:pb-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           {/* Marka */}

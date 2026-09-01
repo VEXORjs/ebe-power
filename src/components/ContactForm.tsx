@@ -102,7 +102,7 @@ export function ContactForm({ power }: { power?: string }) {
           id="power"
           name="power"
           defaultValue={power ?? ''}
-          className="h-11 w-full border border-line bg-ink px-3 text-sm text-light focus:border-accent focus:outline-none"
+          className="h-11 w-full rounded-xl border border-line bg-white px-3 text-sm text-light focus:border-accent focus:outline-none"
         >
           <option value="">Nie wiem — potrzebuję pomocy w doborze</option>
           <option value="do 10 kW">do 10 kW (przenośny)</option>
@@ -124,7 +124,7 @@ export function ContactForm({ power }: { power?: string }) {
           rows={5}
           defaultValue={initialMessage}
           placeholder="Zastosowanie, lista odbiorników, miejsce montażu, oczekiwany termin…"
-          className="w-full border border-line bg-ink px-3 py-3 text-sm text-light placeholder:text-steel/60 focus:border-accent focus:outline-none"
+          className="w-full rounded-xl border border-line bg-white px-3 py-3 text-sm text-light placeholder:text-steel/60 focus:border-accent focus:outline-none"
         />
       </div>
 
@@ -134,7 +134,7 @@ export function ContactForm({ power }: { power?: string }) {
           name="consent"
           checked={consent}
           onChange={(e) => setConsent(e.target.checked)}
-          className="mt-0.5 h-4 w-4 shrink-0 accent-[#ffc61a]"
+          className="mt-0.5 h-4 w-4 shrink-0 accent-[#12a05f]"
         />
         <span>
           Wyrażam zgodę na przetwarzanie moich danych osobowych przez {company.legalName} w celu
@@ -196,7 +196,7 @@ function Field({
         name={name}
         type={type}
         autoComplete={autoComplete}
-        className="h-11 w-full border border-line bg-ink px-3 text-sm text-light focus:border-accent focus:outline-none"
+        className="h-11 w-full rounded-xl border border-line bg-white px-3 text-sm text-light focus:border-accent focus:outline-none"
       />
     </div>
   )

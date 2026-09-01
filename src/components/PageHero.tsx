@@ -21,15 +21,16 @@ export function PageHero({
 }) {
   return (
     <section className="relative overflow-hidden border-b border-line bg-ink-2">
+      <div className="eco-glow absolute inset-0" />
       {image && (
         <>
           <img
             src={image}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 h-full w-full object-cover opacity-25"
+            className="absolute inset-0 h-full w-full object-cover opacity-15"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/50" />
         </>
       )}
       <div className="grid-lines absolute inset-0" />
@@ -54,7 +55,7 @@ export function PageHero({
         {lead && <p className="mt-6 max-w-2xl text-base leading-relaxed text-steel sm:text-lg">{lead}</p>}
         {children}
       </Container>
-      <div className="hazard h-1.5 w-full" />
+      <div className="hazard h-1 w-full" />
     </section>
   )
 }

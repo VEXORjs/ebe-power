@@ -147,7 +147,7 @@ export function Contact() {
               )}
 
               <Reveal delay={120}>
-                <div className="border border-line bg-panel p-6">
+                <div className="rounded-3xl border border-line bg-panel p-6">
                   <p className="text-[11px] tracking-[0.16em] text-steel uppercase">Dane firmy</p>
                   <dl className="mt-4 space-y-2 text-xs text-steel">
                     <div className="flex justify-between gap-4">

@@ -86,10 +86,11 @@ const sizes = {
 }
 
 const variants = {
-  primary: 'bg-accent text-ink hover:bg-accent-2 hover:-translate-y-0.5 shadow-[0_0_0_1px_rgba(0,0,0,0)]',
-  outline: 'border border-line-2 text-light hover:border-accent hover:text-accent',
-  ghost: 'text-light hover:text-accent',
-  dark: 'bg-ink text-light border border-line-2 hover:border-accent hover:text-accent',
+  primary:
+    'rounded-full bg-accent text-white shadow-[0_10px_24px_-10px_rgba(18,160,95,0.7)] hover:bg-accent-2 hover:-translate-y-0.5',
+  outline: 'rounded-full border border-line-2 bg-white/60 text-light hover:border-accent hover:text-accent hover:bg-white',
+  ghost: 'rounded-full text-light hover:text-accent',
+  dark: 'rounded-full bg-white text-light border border-line-2 hover:border-accent hover:text-accent',
 }
 
 export function Button({
@@ -147,7 +148,7 @@ export function Card({
   return (
     <div
       className={`card-dark p-6 transition-all duration-300 ${
-        hover ? 'hover:border-accent/60 hover:-translate-y-1' : ''
+        hover ? 'hover:border-accent/60 hover:-translate-y-1 hover:shadow-[0_18px_40px_-20px_rgba(12,60,40,0.45)]' : ''
       } ${className}`}
     >
       {children}
@@ -161,7 +162,7 @@ export function Card({
 export function IconBadge({ children, className = '' }: { children: ReactNode; className?: string }) {
   return (
     <span
-      className={`flex h-12 w-12 shrink-0 items-center justify-center border border-accent/40 bg-accent/10 text-accent ${className}`}
+      className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-accent/25 bg-accent/10 text-accent ${className}`}
     >
       {children}
     </span>

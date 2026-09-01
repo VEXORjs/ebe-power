@@ -25,7 +25,7 @@ export function Gallery() {
             onClick={() => setCategory(c)}
             className={`font-display h-10 border px-5 text-xs font-bold tracking-[0.12em] uppercase transition-all ${
               category === c
-                ? 'border-accent bg-accent text-ink'
+                ? 'border-accent bg-accent text-white'
                 : 'border-line-2 text-steel hover:border-accent hover:text-accent'
             }`}
           >
@@ -48,11 +48,11 @@ export function Gallery() {
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
-                <span className="font-display absolute top-4 left-4 bg-accent px-3 py-1 text-[11px] font-bold tracking-[0.14em] uppercase text-ink">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#06251a]/80 via-[#06251a]/10 to-transparent" />
+                <span className="font-display absolute top-4 left-4 bg-accent px-3 py-1 text-[11px] font-bold tracking-[0.14em] uppercase text-white">
                   {p.category}
                 </span>
-                <span className="tabular absolute top-4 right-4 bg-ink/80 px-3 py-1 text-[11px] font-semibold text-light">
+                <span className="tabular absolute top-4 right-4 rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold text-light">
                   {p.year}
                 </span>
               </div>
@@ -68,7 +68,7 @@ export function Gallery() {
 
       {active && current && (
         <div
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-ink/95 p-4 backdrop-blur"
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-[#06251a]/90 p-4 backdrop-blur"
           onClick={() => setActive(null)}
           role="dialog"
           aria-modal="true"

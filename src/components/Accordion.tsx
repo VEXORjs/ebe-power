@@ -21,7 +21,7 @@ export function Accordion({ items }: { items: { q: string; a: string }[] }) {
               </span>
               <span
                 className={`mt-1 flex h-7 w-7 shrink-0 items-center justify-center border border-line-2 text-accent transition-transform duration-300 ${
-                  isOpen ? 'rotate-45 border-accent bg-accent text-ink' : ''
+                  isOpen ? 'rotate-45 border-accent bg-accent text-white' : ''
                 }`}
               >
                 <Plus className="h-4 w-4" />

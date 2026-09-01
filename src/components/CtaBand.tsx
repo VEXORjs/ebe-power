@@ -11,11 +11,11 @@ export function CtaBand({
   lead?: string
 }) {
   return (
-    <section className="relative overflow-hidden bg-accent text-ink">
+    <section className="relative overflow-hidden bg-gradient-to-br from-accent via-accent-2 to-teal text-white">
       <div
         className="absolute inset-0 opacity-[0.08]"
         style={{
-          backgroundImage: 'repeating-linear-gradient(45deg, #070b12 0 2px, transparent 2px 14px)',
+          backgroundImage: 'radial-gradient(40% 70% at 20% 20%, #ffffff 0%, transparent 70%), radial-gradient(40% 70% at 85% 0%, #ffffff 0%, transparent 70%)',
         }}
       />
       <Container className="relative py-16 sm:py-20">
@@ -24,14 +24,14 @@ export function CtaBand({
             <h2 className="font-display text-3xl leading-[1] font-extrabold tracking-tight uppercase sm:text-5xl">
               {title}
             </h2>
-            <p className="mt-4 text-sm leading-relaxed text-ink/75 sm:text-base">{lead}</p>
+            <p className="mt-4 text-sm leading-relaxed text-white/80 sm:text-base">{lead}</p>
           </div>
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Button to="/kontakt" size="lg" className="bg-ink text-light hover:bg-ink-2">
+            <Button to="/kontakt" size="lg" className="bg-white text-accent hover:bg-white/90">
               Zapytaj o wycenę
               <ArrowRight className="h-5 w-5" />
             </Button>
-            <Button href={company.phoneHref} size="lg" variant="dark" className="border-ink/30 text-ink hover:border-ink hover:text-ink">
+            <Button href={company.phoneHref} size="lg" variant="dark" className="border-white/50 bg-transparent text-white hover:border-white hover:text-white">
               <Phone className="h-5 w-5" />
               {company.phone}
             </Button>
