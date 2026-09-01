@@ -21,7 +21,7 @@ export const company = {
   phoneSecondary: '', // TODO
   email: 'kontakt@ebe-power.pl',
   emailService: '', // TODO (np. serwis@ebe-power.pl) — puste = ukryty
-  street: 'Borki 10',
+  street: 'Nowy Świat 26F',
   postal: '97-400',
   city: 'Bełchatów',
   region: 'woj. łódzkie',
