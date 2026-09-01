@@ -30,7 +30,7 @@ export function CtaBand({
            <Button 
               to="/kontakt" 
               size="lg" 
-              className="bg-white text-black transition-colors hover:bg-neutral-100"
+              className="bg-white text-black"
             >
               Zapytaj o wycenę
               <ArrowRight className="h-5 w-5" />
@@ -38,7 +38,7 @@ export function CtaBand({
            <Button 
               href={company.phoneHref} 
               size="lg" 
-              className="border border-white/50 bg-transparent text-white transition-colors hover:bg-white/10"
+              className="bg-white text-black"
             >
               <Phone className="h-5 w-5" />
               {company.phone}
