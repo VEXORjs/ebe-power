@@ -124,7 +124,6 @@ export function Contact() {
                           <br />
                           <span className="text-steel">{company.region}</span>
                         </span>
-                      </a>
                     </li>
                     <li className="border-t border-line pt-5">
                       <p className="flex items-center gap-2 text-[11px] tracking-[0.16em] text-steel uppercase">
