@@ -97,7 +97,7 @@ export function Contact() {
                     </li>
                     )}
                     <li className="border-t border-line pt-5">
-                      <p className="text-[11px] tracking-[0.16em] text-steel uppercase">Adres</p>
+                      <p className="text-[11px] tracking-[0.16em] text-steel uppercase">Adres firmy</p>
                       <a
                         href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(company.mapQuery)}`}
                         target="_blank"
@@ -107,6 +107,18 @@ export function Contact() {
                         <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                         <span>
                           {company.street}
+                          <br />
+                          {company.postal} {company.city}
+                          <br />
+                          <span className="text-steel">{company.region}</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li className="border-t border-line pt-5">
+                      <p className="text-[11px] tracking-[0.16em] text-steel uppercase">Siedziba</p>
+                        <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                        <span>
+                          {company.hq}
                           <br />
                           {company.postal} {company.city}
                           <br />
