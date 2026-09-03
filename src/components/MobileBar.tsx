@@ -5,7 +5,7 @@ import { company } from '../content/site'
 /** Dolny pasek szybkiego kontaktu na urządzeniach mobilnych. */
 export function MobileBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-white/95 backdrop-blur-md lg:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-panel/95 backdrop-blur-md lg:hidden">
       <div className="grid grid-cols-2">
         <a
           href={company.phoneHref}

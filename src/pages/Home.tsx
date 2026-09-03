@@ -237,7 +237,7 @@ export function Home() {
               <Reveal key={p.id} delay={i * 90}>
                 <Link
                   to="/oferta"
-                  className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-panel shadow-[0_10px_30px_-22px_rgba(12,60,40,0.4)] transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[0_20px_44px_-22px_rgba(12,60,40,0.45)]"
+                  className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-panel shadow-[0_10px_30px_-22px_rgba(12,60,40,0.4)] transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[0_20px_44px_-22px_rgba(12,60,40,0.45)] dark:shadow-[0_10px_30px_-20px_rgba(0,0,0,0.7)] dark:hover:shadow-[0_20px_44px_-20px_rgba(0,0,0,0.85)]"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <img
@@ -489,7 +489,7 @@ export function Home() {
       </section>
 
       {/* ================= OPINIE ================= */}
-      <section className="border-b border-line bg-white py-20 text-light sm:py-28">
+      <section className="border-b border-line bg-panel py-20 text-light sm:py-28">
         <Container>
           <Reveal>
             <SectionHeading
@@ -501,7 +501,7 @@ export function Home() {
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
             {testimonials.map((t, i) => (
               <Reveal key={t.name} delay={i * 90}>
-                <figure className="flex h-full flex-col rounded-3xl border border-line bg-ink p-7 shadow-[0_16px_40px_-24px_rgba(12,60,40,0.4)]">
+                <figure className="flex h-full flex-col rounded-3xl border border-line bg-ink p-7 shadow-[0_16px_40px_-24px_rgba(12,60,40,0.4)] dark:shadow-[0_16px_40px_-22px_rgba(0,0,0,0.7)]">
                   <Quote className="h-8 w-8 text-accent" />
                   <blockquote className="mt-5 flex-1 text-sm leading-relaxed text-steel">
                     {t.text}

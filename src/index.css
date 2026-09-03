@@ -2,15 +2,25 @@
 
 /* ============================================================================
    EBE POWER — system wizualny
-   Jasny motyw "zielona energia": czyste tła, zielono-turkusowe akcenty,
-   miękkie zaokrąglenia i delikatne cienie.
+   Dwa motywy „zielona energia”:
+   • jasny (domyślny) — czyste tła, zielono-turkusowe akcenty, miękkie cienie,
+   • ciemny — grafitowo-zielone tła, jaśniejszy akcent, te same proporcje.
+
+   Motyw przełącza klasa `dark` na <html> (patrz: src/theme.tsx + skrypt
+   w index.html zapobiegający mignięciu jasnego tła przy starcie).
+   Wszystkie komponenty korzystają z tokenów (bg-ink, text-light, border-line…),
+   dlatego ciemny motyw to wyłącznie nadpisanie zmiennych w bloku `.dark` poniżej.
    ========================================================================== */
+
+/* Wariant `dark:` sterowany klasą, a nie ustawieniem systemowym */
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   /* Tła */
   --color-ink: #f5faf7;
   --color-ink-2: #eaf4ee;
   --color-panel: #ffffff;
+  --color-panel-2: #f4faf6;
 
   /* Linie */
   --color-line: #dceae2;
@@ -34,7 +44,34 @@
 }
 
 :root {
+  color-scheme: light;
   --accent: #0a874a;
+  --shadow-card: 0 10px 30px -18px rgba(12, 60, 40, 0.35);
+}
+
+/* --- Ciemny motyw ---------------------------------------------------------- */
+.dark {
+  color-scheme: dark;
+
+  --color-ink: #0b1210;
+  --color-ink-2: #101a16;
+  --color-panel: #15211c;
+  --color-panel-2: #111c17;
+
+  --color-line: #22332b;
+  --color-line-2: #2f4539;
+
+  /* Jaśniejszy akcent: ≥ 4.5:1 na ciemnym tle dla tekstu i ikon */
+  --color-accent: #12a05f;
+  --color-accent-2: #0d8a50;
+  --color-teal: #2dd4bf;
+  --color-mint: #4ade80;
+
+  --color-steel: #9ab0a6;
+  --color-light: #e6f0ea;
+
+  --accent: #12a05f;
+  --shadow-card: 0 12px 32px -18px rgba(0, 0, 0, 0.7);
 }
 
 html {
@@ -55,6 +92,24 @@ body {
 ::selection {
   background: var(--color-accent);
   color: #ffffff;
+}
+
+/* --- Płynna zmiana motywu --------------------------------------------------
+   Klasa `theme-transition` jest dodawana do <html> tylko na chwilę podczas
+   przełączania (src/theme.tsx), żeby nie spowalniać pozostałych animacji. */
+@media (prefers-reduced-motion: no-preference) {
+  html.theme-transition,
+  html.theme-transition *:not([data-theme-transition='none']),
+  html.theme-transition *::before,
+  html.theme-transition *::after {
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease,
+      fill 0.3s ease,
+      stroke 0.3s ease,
+      box-shadow 0.3s ease !important;
+  }
 }
 
 /* --- Krój wyświetlany ------------------------------------------------------ */
@@ -100,8 +155,8 @@ body {
 
 @utility grid-lines {
   background-image:
-    linear-gradient(to right, rgba(10, 135, 74, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(10, 135, 74, 0.07) 1px, transparent 1px);
+    linear-gradient(to right, color-mix(in srgb, var(--color-accent) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-accent) 8%, transparent) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
@@ -130,10 +185,10 @@ body {
 
 /* --- Karta ---------------------------------------------------------------- */
 @utility card-dark {
-  background: linear-gradient(180deg, #ffffff 0%, #f4faf6 100%);
+  background: linear-gradient(180deg, var(--color-panel) 0%, var(--color-panel-2) 100%);
   border: 1px solid var(--color-line);
   border-radius: var(--radius-card);
-  box-shadow: 0 10px 30px -18px rgba(12, 60, 40, 0.35);
+  box-shadow: var(--shadow-card);
 }
 
 /* --- Pasek przewijania ----------------------------------------------------- */
@@ -142,10 +197,10 @@ body {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #eaf4ee;
+  background: var(--color-ink-2);
 }
 ::-webkit-scrollbar-thumb {
-  background: #bcd8c9;
+  background: var(--color-line-2);
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {

@@ -2,8 +2,8 @@
 # EBE POWER — strona wizytówka
 
 Strona prezentacyjna (wizytówka) dla firmy **EBE POWER** zajmującej się sprzedażą agregatów
-prądotwórczych. Ciemny, industrialny layout: grafit + żółty akcent, kondensacyjne nagłówki,
-duże zdjęcia, animacje przy przewijaniu.
+prądotwórczych. Layout „zielona energia” w dwóch motywach — jasnym (domyślnym) i ciemnym —
+z przełącznikiem w nawigacji, kondensacyjne nagłówki, duże zdjęcia, animacje przy przewijaniu.
 
 **Stack:** React 19 + Vite + TypeScript + Tailwind CSS v4 + React Router.
 
@@ -25,7 +25,8 @@ src/
 ├─ components/         ← Navbar, Footer, Hero, kalkulator, formularz, galeria, FAQ…
 ├─ pages/              ← Home, Oferta, Realizacje, O firmie, Kontakt, Polityka prywatności, 404
 ├─ App.tsx             ← trasy (react-router)
-└─ index.css           ← system wizualny (kolory, kroje, animacje, utility)
+├─ theme.tsx           ← motyw jasny/ciemny (ThemeProvider, useTheme, zapis w localStorage)
+└─ index.css           ← system wizualny (tokeny kolorów obu motywów, kroje, animacje, utility)
 public/images/         ← zdjęcia (wygenerowane, gotowe do podmiany na własne)
 ```
 
@@ -64,5 +65,13 @@ Podstrony: `/` · `/oferta` · `/realizacje` · `/o-firmie` · `/kontakt` · `/p
 - **Galeria realizacji** z filtrem kategorii i podglądem zdjęcia.
 - **FAQ** (rozwijane), liczniki animowane, stopka z danymi rejestrowymi, dane
   strukturalne `LocalBusiness` (schema.org), meta tagi OG per podstrona.
-- Dostępność: skip-link, focus-visible, `prefers-reduced-motion`, semantyczne nagłówki.
+- **Motyw jasny / ciemny** — przełącznik (słońce/księżyc) w pasku nawigacji i przy menu
+  mobilnym. Bez wyboru użytkownika strona podąża za ustawieniem systemowym
+  (`prefers-color-scheme`); kliknięcie zapisuje wybór w `localStorage` (`ebe-theme`).
+  Skrypt inline w `index.html` nakłada klasę `dark` przed startem React — brak mignięcia
+  jasnego tła. Kolory obu motywów to tokeny w `src/index.css` (`@theme` + blok `.dark`),
+  komponenty używają wyłącznie klas `bg-ink`, `bg-panel`, `text-light`, `border-line` itd.,
+  a wariant `dark:` Tailwinda jest sterowany klasą (`@custom-variant dark`).
+- Dostępność: skip-link, focus-visible, `prefers-reduced-motion`, semantyczne nagłówki,
+  przełącznik motywu z `aria-label`/`aria-pressed`.
 

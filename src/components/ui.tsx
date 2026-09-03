@@ -88,9 +88,9 @@ const sizes = {
 const variants = {
   primary:
     'rounded-full bg-accent text-white shadow-[0_10px_24px_-10px_rgba(18,160,95,0.7)] hover:bg-accent-2 hover:-translate-y-0.5',
-  outline: 'rounded-full border border-line-2 bg-white/60 text-light hover:border-accent hover:text-accent hover:bg-white',
+  outline: 'rounded-full border border-line-2 bg-panel/60 text-light hover:border-accent hover:text-accent hover:bg-panel',
   ghost: 'rounded-full text-light hover:text-accent',
-  dark: 'rounded-full bg-white text-light border border-line-2 hover:border-accent hover:text-accent',
+  dark: 'rounded-full bg-white text-[#0c2119] border border-white/80 hover:border-white hover:bg-[#eaf4ee] hover:text-[#0a874a]',
 }
 
 export function Button({
@@ -148,7 +148,7 @@ export function Card({
   return (
     <div
       className={`card-dark p-6 transition-all duration-300 ${
-        hover ? 'hover:border-accent/60 hover:-translate-y-1 hover:shadow-[0_18px_40px_-20px_rgba(12,60,40,0.45)]' : ''
+        hover ? 'hover:border-accent/60 hover:-translate-y-1 hover:shadow-[0_18px_40px_-20px_rgba(12,60,40,0.45)] dark:hover:shadow-[0_18px_40px_-18px_rgba(0,0,0,0.8)]' : ''
       } ${className}`}
     >
       {children}
