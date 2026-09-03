@@ -9,7 +9,27 @@
       name="description"
       content="EBE POWER — sprzedaż agregatów prądotwórczych od 2 kW do 2 MW. Dobór mocy, transport, montaż, serwis i przeglądy. Zasilanie awaryjne dla firm, przemysłu i domu."
     />
-    <meta name="theme-color" content="#070b12" />
+    <meta name="theme-color" content="#f5faf7" />
+    <!--
+      Motyw jasny/ciemny: ustawiamy klasę `dark` na <html> jeszcze przed
+      załadowaniem React, żeby przy odświeżeniu nie mignęło jasne tło.
+      Klucz w localStorage: "ebe-theme" (light | dark; brak = zgodnie z systemem).
+    -->
+    <script>
+      ;(function () {
+        try {
+          var stored = localStorage.getItem('ebe-theme')
+          var dark =
+            stored === 'dark' ||
+            (stored !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+          var root = document.documentElement
+          root.classList.toggle('dark', dark)
+          root.style.colorScheme = dark ? 'dark' : 'light'
+          var meta = document.querySelector('meta[name="theme-color"]')
+          if (meta) meta.setAttribute('content', dark ? '#0b1210' : '#f5faf7')
+        } catch (e) {}
+      })()
+    </script>
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pl_PL" />
     <meta property="og:title" content="EBE POWER — agregaty prądotwórcze" />

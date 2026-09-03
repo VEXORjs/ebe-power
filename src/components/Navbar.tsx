@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { ArrowRight, Clock, Mail, Menu, Phone, ShoppingCart, X } from 'lucide-react'
 import { company, nav } from '../content/site'
 import { Logo } from './Logo'
+import { ThemeToggle } from './ThemeToggle'
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -53,7 +54,7 @@ export function Navbar() {
 
       <header
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-          scrolled ? 'border-b border-line bg-white/90 shadow-[0_10px_30px_-24px_rgba(12,60,40,0.6)] backdrop-blur-md' : 'border-b border-transparent bg-white/70 backdrop-blur'
+          scrolled ? 'border-b border-line bg-panel/90 shadow-[0_10px_30px_-24px_rgba(12,60,40,0.6)] backdrop-blur-md dark:shadow-[0_10px_30px_-20px_rgba(0,0,0,0.8)]' : 'border-b border-transparent bg-panel/70 backdrop-blur'
         }`}
       >
         <div className="mx-auto flex h-[72px] w-full max-w-7xl items-center justify-between px-5 sm:px-8">
@@ -87,6 +88,7 @@ export function Navbar() {
           </nav>
 
           <div className="hidden items-center gap-4 lg:flex">
+            <ThemeToggle />
             <a
               href={company.phoneHref}
               className="font-display flex items-center gap-2 text-[15px] font-semibold tracking-wide text-light transition-colors hover:text-accent"
@@ -103,14 +105,17 @@ export function Navbar() {
             </Link>
           </div>
 
-          <button
-            onClick={() => setOpen((v) => !v)}
-            className="flex h-11 w-11 items-center justify-center border border-line-2 text-light lg:hidden"
-            aria-label={open ? 'Zamknij menu' : 'Otwórz menu'}
-            aria-expanded={open}
-          >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+          <div className="flex items-center gap-2 lg:hidden">
+            <ThemeToggle />
+            <button
+              onClick={() => setOpen((v) => !v)}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-line-2 text-light transition-colors hover:border-accent hover:text-accent"
+              aria-label={open ? 'Zamknij menu' : 'Otwórz menu'}
+              aria-expanded={open}
+            >
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
       </header>
 

@@ -102,7 +102,7 @@ export function ContactForm({ power }: { power?: string }) {
           id="power"
           name="power"
           defaultValue={power ?? ''}
-          className="h-11 w-full rounded-xl border border-line bg-white px-3 text-sm text-light focus:border-accent focus:outline-none"
+          className="h-11 w-full rounded-xl border border-line bg-panel px-3 text-sm text-light focus:border-accent focus:outline-none dark:bg-ink"
         >
           <option value="">Nie wiem — potrzebuję pomocy w doborze</option>
           <option value="do 10 kW">do 10 kW (przenośny)</option>
@@ -124,7 +124,7 @@ export function ContactForm({ power }: { power?: string }) {
           rows={5}
           defaultValue={initialMessage}
           placeholder="Zastosowanie, lista odbiorników, miejsce montażu, oczekiwany termin…"
-          className="w-full rounded-xl border border-line bg-white px-3 py-3 text-sm text-light placeholder:text-steel/80 focus:border-accent focus:outline-none"
+          className="w-full rounded-xl border border-line bg-panel px-3 py-3 text-sm text-light placeholder:text-steel/80 focus:border-accent focus:outline-none dark:bg-ink"
         />
       </div>
 
@@ -134,7 +134,7 @@ export function ContactForm({ power }: { power?: string }) {
           name="consent"
           checked={consent}
           onChange={(e) => setConsent(e.target.checked)}
-          className="mt-0.5 h-4 w-4 shrink-0 accent-[#12a05f]"
+          className="mt-0.5 h-4 w-4 shrink-0 accent-accent"
         />
         <span>
           Wyrażam zgodę na przetwarzanie moich danych osobowych przez {company.legalName} w celu
@@ -147,7 +147,7 @@ export function ContactForm({ power }: { power?: string }) {
       </label>
 
       {error && (
-        <p className="flex items-center gap-2 border border-red-500/40 bg-red-500/10 p-3 text-xs text-red-300">
+        <p className="flex items-center gap-2 rounded-xl border border-red-500/40 bg-red-500/10 p-3 text-xs text-red-700 dark:text-red-300">
           <TriangleAlert className="h-4 w-4 shrink-0" />
           {error}
         </p>
@@ -165,7 +165,7 @@ export function ContactForm({ power }: { power?: string }) {
         </p>
       )}
       {state === 'error' && (
-        <p className="text-xs text-red-300">
+        <p className="text-xs text-red-700 dark:text-red-300">
           Nie udało się wysłać formularza. Zadzwoń do nas: {company.phone}
         </p>
       )}
@@ -194,7 +194,7 @@ function Field({
         name={name}
         type={type}
         autoComplete={autoComplete}
-        className="h-11 w-full rounded-xl border border-line bg-white px-3 text-sm text-light focus:border-accent focus:outline-none"
+        className="h-11 w-full rounded-xl border border-line bg-panel px-3 text-sm text-light focus:border-accent focus:outline-none dark:bg-ink"
       />
     </div>
   )

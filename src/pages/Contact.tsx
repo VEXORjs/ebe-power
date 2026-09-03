@@ -156,7 +156,7 @@ export function Contact() {
                     <iframe
                       title={`Mapa — ${company.name}`}
                       src={company.mapEmbed}
-                      className="h-64 w-full grayscale-[0.4]"
+                      className="h-64 w-full grayscale-[0.4] dark:invert-[0.92] dark:hue-rotate-180"
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
                     />

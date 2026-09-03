@@ -52,7 +52,7 @@ export function Gallery() {
                 <span className="font-display absolute top-4 left-4 bg-accent px-3 py-1 text-[11px] font-bold tracking-[0.14em] uppercase text-white">
                   {p.category}
                 </span>
-                <span className="tabular absolute top-4 right-4 rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold text-light">
+                <span className="tabular absolute top-4 right-4 rounded-full bg-panel/90 px-3 py-1 text-[11px] font-semibold text-light">
                   {p.year}
                 </span>
               </div>
